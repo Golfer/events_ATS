@@ -1,0 +1,15 @@
+require:
+  - rubocop-rails
+  - rubocop-rspec
+  - rubocop-factory_bot
+
+AllCops:
+  NewCops: enable
+  Exclude:
+    - bin/**/*
+    - db/*
+    - config/**/*
+    - tmp/**/*
+  TargetRubyVersion: 3.3.3
+
+

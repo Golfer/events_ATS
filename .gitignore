@@ -31,3 +31,10 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+
+## support files
+.idea
+.idea/*
+coverage/*
+.DS_Store
+**/.DS_Store
