@@ -22,7 +22,7 @@ class Application < ApplicationRecord
     events.where(type: 'Application::Event::Interview').order(created_at: :desc).first&.created_at
   end
 
-  def notes
+  def list_notes
     events.where(type: "Application::Event::Note").order(created_at: :desc)
   end
 end

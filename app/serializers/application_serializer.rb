@@ -8,6 +8,6 @@ class ApplicationSerializer < ActiveModel::Serializer
   end
 
   def count_notes
-    object.notes.count
+    object.list_notes.count
   end
 end

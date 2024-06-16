@@ -7,9 +7,12 @@ AllCops:
   NewCops: enable
   Exclude:
     - bin/**/*
-    - db/*
+    - db/**/*
     - config/**/*
     - tmp/**/*
+    - config.ru
   TargetRubyVersion: 3.3.3
 
+Style/ClassAndModuleChildren:
+  Enabled: false
 

@@ -10,14 +10,14 @@ class Application::Event < ApplicationRecord
 
 
   def create_initial_event
-    if self.type == "Application::Event::Note"
-      self.application.notes += 1
-      return self.application.save!
+    if type == "Application::Event::Note"
+      application.notes += 1
+      application.save!
     end
 
-    self.application.job.ongoing += 1 if self.type == "Application::Event::Interview"
-    self.application.job.rejected += 1 if self.type == "Application::Event::Rejected"
-    self.application.job.hired += 1 if self.type == "Application::Event::Hired"
-    self.application.job.save!
+    application.job.ongoing += 1 if self.type == "Application::Event::Interview"
+    application.job.rejected += 1 if self.type == "Application::Event::Rejected"
+    application.job.hired += 1 if self.type == "Application::Event::Hired"
+    application.job.save!
   end
 end

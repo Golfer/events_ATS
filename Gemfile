@@ -31,7 +31,7 @@ gem 'tzinfo-data', platforms: %i[windows jruby]
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', require: false
 
-gem "active_model_serializers", "~> 0.10.14"
+gem 'active_model_serializers', '~> 0.10.14'
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
@@ -42,13 +42,13 @@ gem "active_model_serializers", "~> 0.10.14"
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem 'awesome_print'
+  gem 'bullet'
   gem 'byebug'
   gem 'debug', platforms: %i[mri windows]
   gem 'dotenv-rails'
+  gem 'faker'
   gem 'pry-byebug'
   gem 'pry-rails'
-  gem 'bullet'
-  gem 'faker'
 end
 
 group :development do
@@ -67,4 +67,3 @@ group :test do
   gem 'shoulda-matchers'
   gem 'simplecov', require: false
 end
-
