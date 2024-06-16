@@ -1,4 +1,8 @@
-# frozen_string_literal: true
+class Job::Event < ApplicationRecord
+  self.table_name = 'job_events'
+  belongs_to :job
 
-class Job::Event < Event
+  def self.types
+    %w[Job::Event::Activated Job::Event::Deactivated]
+  end
 end
