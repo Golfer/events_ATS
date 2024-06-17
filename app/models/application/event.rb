@@ -10,7 +10,6 @@ class Application::Event < ApplicationRecord
 
 
   def create_initial_event
-    # byebug
     if type == "Application::Event::Note"
       application.notes += 1
       application.save
