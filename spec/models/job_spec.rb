@@ -2,8 +2,11 @@
 
 require 'rails_helper'
 
-RSpec.describe Job, type: :model do
+describe Job do
+  it { is_expected.to validate_presence_of(:title) }
+
   describe 'relationships' do
     it { is_expected.to have_many(:events) }
+    it { is_expected.to have_many(:applications) }
   end
 end

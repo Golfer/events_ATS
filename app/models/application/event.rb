@@ -10,14 +10,15 @@ class Application::Event < ApplicationRecord
 
 
   def create_initial_event
+    # byebug
     if type == "Application::Event::Note"
       application.notes += 1
-      application.save!
+      application.save
     end
 
-    application.job.ongoing += 1 if self.type == "Application::Event::Interview"
-    application.job.rejected += 1 if self.type == "Application::Event::Rejected"
-    application.job.hired += 1 if self.type == "Application::Event::Hired"
-    application.job.save!
+    application.job.ongoing += 1 if type == "Application::Event::Interview"
+    application.job.rejected += 1 if type == "Application::Event::Rejected"
+    application.job.hired += 1 if type == "Application::Event::Hired"
+    application.job.save
   end
 end

@@ -15,7 +15,7 @@ class Application < ApplicationRecord
   end
 
   def event_type
-    events.where.not(type: "Application::Event::Note").order(created_at: :desc).first.type
+    events.where.not(type: "Application::Event::Note").order(created_at: :desc).first&.type
   end
 
   def last_interview_date

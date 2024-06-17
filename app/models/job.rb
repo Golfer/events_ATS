@@ -13,6 +13,6 @@ class Job < ApplicationRecord
   end
 
   def event_type
-    events.order(created_at: :desc).first.type
+    events.order(created_at: :desc).first&.type
   end
 end
